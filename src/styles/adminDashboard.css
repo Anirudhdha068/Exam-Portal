@@ -1,0 +1,119 @@
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.create-exam-btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.stat-box p {
+  font-size: 12px;
+  color: #2563eb;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+}
+
+.stat-box.active {
+  border-left: 5px solid #2563eb;
+}
+
+/* Cards */
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.view-link {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* Table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* Badges */
+.badge {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.pass {
+  background: #d1fae5;
+  color: #10b981;
+}
+
+.badge.fail {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* Activity */
+.activity-item {
+  background: #f9fafb;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.system-tag {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.admin-tag {
+  font-size: 12px;
+  color: #2563eb;
+}

@@ -1,0 +1,96 @@
+/* HEADER */
+.upload-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upload-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.upload-header p {
+  color: #6b7280;
+}
+
+/* CENTER THE CARD PROPERLY */
+.upload-card {
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;   /* THIS centers it */
+}
+
+/* FORM LAYOUT */
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+/* FILE INPUT STYLE */
+input[type="file"] {
+  padding: 10px;
+  background: #f9fafb;
+}
+
+/* BUTTONS */
+.form-actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #9ca3af;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #f3f4f6;
+}
+
+.save-btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  background: #1e4ed8;
+}
