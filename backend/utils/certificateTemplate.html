@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Certificate of Completion</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #f8f9fa;
+    }
+    .certificate-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    .header-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 50px 30px;
+      border-radius: 20px;
+      color: white;
+      margin-bottom: 40px;
+    }
+    .header-gradient h1 {
+      font-size: 36px;
+      margin: 0 0 10px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .header-gradient .subtitle {
+      font-size: 20px;
+      opacity: 0.95;
+      margin-bottom: 30px;
+    }
+    .student-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2d3748;
+      margin: 30px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .exam-title {
+      font-size: 24px;
+      background: #e2e8f0;
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 30px 0;
+      font-weight: bold;
+      color: #4a5568;
+    }
+    .score-section {
+      background: linear-gradient(135deg, #48bb78, #38a169);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 15px;
+      display: inline-block;
+      margin: 30px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .issue-date {
+      font-size: 16px;
+      color: #666;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px solid #e2e8f0;
+    }
+    .portal-logo {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 28px;
+      opacity: 0.1;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #718096;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate-container">
+    <div class="portal-logo">EXAM PORTAL</div>
+    
+    <div class="header-gradient">
+      <h1>Certificate of Completion</h1>
+      <div class="subtitle">This certifies that</div>
+    </div>
+    
+    <div class="student-name">{{studentName}}</div>
+    
+    <div class="exam-title">has successfully completed the exam</div>
+    
+    <div class="exam-title" style="background: linear-gradient(135deg, #fed7d7, #fc8181); color: #742a2a;">
+      {{examTitle}}
+    </div>
+    
+    <div class="score-section">
+      Final Score: {{score}} / {{totalMarks}} (Passed)
+    </div>
+    
+    <div class="issue-date">
+      <strong>Issue Date:</strong> {{issueDate}}<br>
+      Certificate ID: CERT-{{certId}}
+    </div>
+    
+    <div class="footer">
+      Issued by Exam Portal Team | Digital Certificate
+    </div>
+  </div>
+</body>
+</html>
+

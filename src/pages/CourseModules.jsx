@@ -55,7 +55,7 @@ function CourseModules() {
                    </div>
                    <div className="resource-box">
                      <span>Course Information attached</span>
-                     <span className="download">⬇</span>
+                     <span className="download"></span>
                    </div>
                  </div>
                </div>
@@ -63,11 +63,11 @@ function CourseModules() {
           </div>
 
           <div className="request-box">
-            <div className="plus">+</div>
+            <div className="plus"></div>
             <h3>New Module Requests</h3>
             {submitted ? (
               <div className="success-message">
-                <p>✅ Module request submitted successfully! Admin will review it soon.</p>
+                <p>Module request submitted successfully! Admin will review it soon.</p>
                 <button className="request-btn" onClick={() => {
                   setSubmitted(false);
                   setModuleName('');

@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-}
+}             
 
 .modules-header h1 {
   margin-bottom: 5px;
@@ -170,4 +170,47 @@
 .clickable:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.request-box {
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;   /* 🔥 vertical layout */
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto 0 auto; /* center form */
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.request-btn {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.request-btn:hover {
+  background: #1e4ed8;
 }

@@ -145,19 +145,32 @@ exports.submitExam = async (req, res) => {
       });
       await cert.save();
 
-      // Send certificate email
-      const sendCertificateEmail = require('../utils/emailService');
-      const student = await require('../models/User').findById(req.user.id).select('email fullName');
-      const examTitle = exam.title;
-      const issueDate = new Date().toLocaleDateString();
-      await sendCertificateEmail({
-        email: student.email,
-        subject: `🎉 Certificate: ${examTitle}`,
-        studentName: student.fullName,
-        examTitle,
+      // Populate certificate data for PDF
+      await cert.populate('student', 'fullName email');
+      await cert.populate('exam', 'title');
+
+      const generateCertificatePDF = require('../utils/generateCertificatePDF');
+      const certData = {
+        studentName: cert.student.fullName,
+        examTitle: cert.exam.title,
+        issueDate: cert.issueDate.toLocaleDateString(),
         score: Math.round(score),
         totalMarks: exam.totalMarks,
-        issueDate
+        certId: cert._id.toString().slice(-6)
+      };
+      const pdfBuffer = await generateCertificatePDF(certData);
+
+      // Send certificate email with PDF attachment
+      const sendCertificateEmail = require('../utils/emailService');
+      await sendCertificateEmail({
+        email: cert.student.email,
+        subject: `🎉 Your Certificate: ${cert.exam.title}`,
+        studentName: cert.student.fullName,
+        examTitle: cert.exam.title,
+        score: Math.round(score),
+        totalMarks: exam.totalMarks,
+        issueDate: cert.issueDate.toLocaleDateString(),
+        pdfBuffer
       });
     }
 

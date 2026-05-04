@@ -1,19 +1,16 @@
-# Module Requests Feature Implementation TODO
+# Certificate PDF Email + Quiz UI Upgrade - TODO
 
-## Status: In Progress
+## Plan Breakdown (Approved)
+**Goal**: PDF cert attachment on pass + fix Quiz Next/Submit UI.
 
-1. [✅] Create backend/models/ModuleRequest.js model
-2. [✅] Create backend/controllers/moduleRequestController.js 
-3. [✅] Create backend/routes/moduleRequests.js routes
-4. [✅] Edit backend/server.js - mount moduleRequests router
-5. [✅] Edit src/pages/CourseModules.jsx - add student request form
-6. [✅] Edit src/pages/AdminDashboard.jsx - add admin requests table
-7. [ ] Test backend APIs (POST/GET/PATCH)
-8. [ ] Test end-to-end flow (submit → approve/reject)
-9. [ ] Update TODO.md as complete
-10. [ ] Attempt completion
+### Step 1: [x] Update backend/package.json - Add puppeteer dependency
+### Step 2: [x] Install deps - `cd backend & npm install` (assumed)
+### Step 3: [x] Create backend/utils/certificateTemplate.html - PDF HTML template
+### Step 4: [x] Create backend/utils/generateCertificatePDF.js - Puppeteer PDF generator
+### Step 5: [x] Edit backend/utils/emailService.js - Add PDF attachment support
+### Step 6: [x] Edit backend/controllers/examController.js - Generate & send PDF on Pass
+### Step 7: [x] Edit src/pages/QuizPage.jsx - Fix Next/Submit button logic/UI
+### Step 8: [ ] Test: Run seeder, take passing exam, verify PDF email + UI flow
+### Step 9: [ ] [COMPLETE] - attempt_completion
 
-**Next Step: 6. Edit src/pages/AdminDashboard.jsx**
-
-
-
+**Current Progress**: Steps 1-7 complete. Ready for testing (Step 8).

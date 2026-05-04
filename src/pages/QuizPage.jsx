@@ -169,12 +169,15 @@ function QuizPage() {
         </button>
 
         <div>
-          <button className="primary-btn" onClick={handleNext} disabled={currentIndex === exam.questions.length - 1}>
-            Next Question →
-          </button>
-          <button className="submit-btn" onClick={() => handleSubmit(false)}>
-            Submit Exam
-          </button>
+          {currentIndex < exam.questions.length - 1 ? (
+            <button className="primary-btn" onClick={handleNext}>
+              Next Question →
+            </button>
+          ) : (
+            <button className="primary-btn submit-btn" onClick={() => handleSubmit(false)}>
+              Submit Exam
+            </button>
+          )}
         </div>
       </div>
     </div>

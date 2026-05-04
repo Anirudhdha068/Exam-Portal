@@ -10,7 +10,7 @@ const sendEmail = async (options) => {
       },
     });
 
-    const mailOptions = {
+const mailOptions = {
       from: `Exam Portal Admin <${process.env.EMAIL_USER}>`,
       to: options.email,
       subject: options.subject,
@@ -26,11 +26,16 @@ const sendEmail = async (options) => {
             <p style="font-size: 14px; margin-top: 30px; opacity: 0.8;">Issued: ${options.issueDate || new Date().toLocaleDateString()}</p>
           </div>
           <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-            <p>Certificate available in your dashboard.</p>
+            <p><strong>Your certificate PDF is attached below!</strong></p>
+            <p>Download and save for your records.</p>
             <p style="color: #666; font-size: 14px;"><strong>Exam Portal Team</strong></p>
           </div>
         </div>
       `,
+      attachments: options.pdfBuffer ? [{
+        filename: `Certificate_${options.studentName.replace(/\\s+/g, '_')}_${options.examTitle.replace(/\\s+/g, '_')}.pdf`,
+        content: options.pdfBuffer
+      }] : []
     };
 
     await transporter.sendMail(mailOptions);
