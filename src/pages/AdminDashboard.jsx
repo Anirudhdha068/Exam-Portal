@@ -46,7 +46,7 @@ function AdminDashboard() {
               className="create-exam-btn"
               onClick={() => navigate("/admin/manageExams/create")}
             >
-              + Create New Exam
+              Create New Exam
             </button>
           </div>
 

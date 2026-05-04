@@ -51,7 +51,7 @@ function Resources() {
               <p>Upload PDFs, links, or notes for students.</p>
             </div>
             <button className="upload-btn" onClick={() => navigate("/admin/resources/upload")}>
-              + Upload Resource
+              Upload Resource
             </button>
           </div>
 

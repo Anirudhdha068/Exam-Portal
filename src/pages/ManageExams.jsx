@@ -90,7 +90,7 @@ function ManageExams() {
               <p>Create, edit, or toggle the status of your online tests.</p>
             </div>
             <button className="create-btn" onClick={() => navigate("/admin/manageExams/create")}>
-              + Create New Exam
+              Create New Exam
             </button>
           </div>
 

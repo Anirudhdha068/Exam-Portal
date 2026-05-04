@@ -94,3 +94,40 @@ input[type="file"] {
 .save-btn:hover {
   background: #1e4ed8;
 }
+
+.upload-btn {
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background: #1e4ed8;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+.view-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}

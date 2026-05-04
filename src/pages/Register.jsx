@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AdminSidebar from "../components/AdminSidebar";
+import AdminTopbar from "../components/AdminTopbar";
 import "../styles/register.css";
 
 function Register() {
@@ -106,6 +108,10 @@ function Register() {
   };
 
   return (
+      <div className="admin-layout">
+      <AdminSidebar />
+      <div className="admin-main">
+        <AdminTopbar />
     <div className="register-wrapper">
       <div className="register-card">
         <h2>Add New Student</h2>
@@ -189,6 +195,8 @@ function Register() {
           <span onClick={() => navigate("/admin/dashboard")}>Back to Dashboard</span>
         </p>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

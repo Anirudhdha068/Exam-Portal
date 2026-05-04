@@ -76,7 +76,7 @@ function AdminReports() {
               <h1>Exam Reports</h1>
               <p>View and analyze student performance across all exams.</p>
             </div>
-            <button className="export-btn" onClick={handleExportCSV}>⬇ Export Data</button>
+            <button className="export-btn" onClick={handleExportCSV}>Export Data</button>
           </div>
 
           <div className="reports-card">
