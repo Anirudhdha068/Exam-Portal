@@ -8,7 +8,7 @@ function Navbar() {
       <div className="logo">🎓 Exam Portal</div>
 
       <div className="nav-right">
-        <button className="theme-btn">🌙</button>
+        
         <button className="primary-btn small" onClick={() => navigate("/login?type=student")}>Get Started</button>
       </div>
     </nav>

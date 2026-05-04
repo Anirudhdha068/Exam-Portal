@@ -104,8 +104,6 @@ function Login() {
         </button>
 
       </div>
-
-      <div className="theme-toggle">🌙</div>
     </div>
   );
 }
