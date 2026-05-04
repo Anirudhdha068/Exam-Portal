@@ -44,7 +44,7 @@ function CertificatePage() {
         </div>
       </div>
       <button onClick={() => window.print()} style={{marginTop: "20px", padding: "10px 20px", fontSize: "16px", cursor: "pointer", background: "#007bff", color: "white", border: "none", borderRadius: "5px"}}>
-        ⬇️ Download / Print Certificate
+        Download / Print Certificate
       </button>
     </div>
   );

@@ -54,6 +54,8 @@ app.use("/api/student", require("./routes/student"));
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/certificate", require("./routes/certificate"));
 app.use("/api/resources", require("./routes/resource"));
+app.use("/api/module-requests", require("./routes/moduleRequests"));
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
